@@ -29,7 +29,7 @@ app.layout = html.Div([
                                 {'label' : 'Primera dosis', 'value' : 'primera_dosis_cantidad'},
                                 {'label' : 'Segunda dosis', 'value' : 'segunda_dosis_cantidad'}
                             ], value = 'primera_dosis_cantidad',
-                            style = {'text-aling':'center', 'color':'black'}, className = 'dcc_compon'),
+                            style = {'text-align':'center', 'color':'black'}, className = 'dcc_compon'),
         ], className = 'create_container2 five columns', style = {'margin-bottom': '20px'}),
     ], className = 'row flex-display'),
 
