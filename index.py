@@ -51,32 +51,37 @@ app.layout = html.Div([
 
 @app.callback(
     Output('my_graph', component_property='figure'),
-    [Input('dosis-radioitems', component_property='value')])
+    [Input('dosis-radioitems', component_property='value')]
+)
 def update_graph(value):
 
     if value == 'primera_dosis_cantidad':
         fig = px.bar(
             data_frame=df,
             x='jurisdiccion_nombre',
-            y='primera_dosis_cantidad')
+            y='primera_dosis_cantidad'
+        )
     else:
         fig = px.bar(
             data_frame=df,
             x='jurisdiccion_nombre',
-            y='segunda_dosis_cantidad')
+            y='segunda_dosis_cantidad'
+        )
     return fig
 
 
 @app.callback(
     Output('pie_graph', component_property='figure'),
-    [Input('dosis-radioitems', component_property='value')])
+    [Input('dosis-radioitems', component_property='value')]
+)
 def update_graph_pie(value):
 
     if value == 'primera_dosis_cantidad':
         fig2 = px.pie(
             data_frame=df,
             names='jurisdiccion_nombre',
-            values='primera_dosis_cantidad')
+            values='primera_dosis_cantidad'
+        )
     else:
         fig2 = px.pie(
             data_frame=df,
