@@ -22,3 +22,5 @@ Instalación de librerías:
 pip install dash
 pip install pandas
 ```
+
+python index.py
